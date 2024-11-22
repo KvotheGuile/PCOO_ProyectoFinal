@@ -7,7 +7,7 @@
 using namespace std;
 
 
-class Administrador
+class Administrator
 {
     private:
     string usuario;
@@ -15,8 +15,8 @@ class Administrador
     bool loggedIn;
 
     public:
-    Administrador(string _usuario, string _password);
-    ~Administrador();
+    Administrator(string _usuario, string _password);
+    ~Administrator();
 
     bool esUsuario(string _usuario);
     void cambiarPassword(string _password);

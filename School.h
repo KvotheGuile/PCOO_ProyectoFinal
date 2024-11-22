@@ -18,7 +18,7 @@ class School
     
     std::vector<Student> estudiantes;
     std::vector<Professor> profesor;
-    std::vector<Administrador> administrador;
+    std::vector<Administrator> administrador;
 
     public:
     School();
