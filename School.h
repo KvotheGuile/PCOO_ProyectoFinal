@@ -17,6 +17,8 @@ class School
     double colegiatura;
     
     std::vector<Student> estudiantes;
+    std::vector<Professor> profesor;
+    std::vector<Administrador> administrador;
 
     public:
     School();
