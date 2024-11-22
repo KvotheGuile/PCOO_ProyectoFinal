@@ -25,7 +25,12 @@ class School
     School(std::string nombre, double colegiatura);
     ~School();
 
+    void aumentarColegiatura(double cantidad);
     void recolectarColegiatura();
+    void pagarProfesores();
+    
+    bool dineroSuficiente();
+    void autenticar(std::string usuario, std::string contrasena);
 };
 
 #endif
