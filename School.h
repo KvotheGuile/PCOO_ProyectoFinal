@@ -22,15 +22,15 @@ class School
 
     public:
     School();
-    School(std::string nombre, double colegiatura);
+    School(std::string _nombre, double _colegiatura);
     ~School();
 
-    void aumentarColegiatura(double cantidad);
+    void aumentarColegiatura(double _cantidad);
     void recolectarColegiatura();
     void pagarProfesores();
     
     bool dineroSuficiente();
-    void autenticar(std::string usuario, std::string contrasena);
+    void autenticar(std::string _usuario, std::string _contrasena);
 };
 
 #endif
