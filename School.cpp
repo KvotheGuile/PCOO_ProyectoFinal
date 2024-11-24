@@ -47,7 +47,7 @@ bool School::dineroSuficiente()
         dineroRequerido += p.getSalario();
     }
 
-    return false;
+    return dineroRequerido <= dinero;
 };
 
 void School::autenticar(std::string usuario, std::string contrasena)
