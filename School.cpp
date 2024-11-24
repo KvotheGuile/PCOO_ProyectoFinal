@@ -25,11 +25,15 @@ void School::aumentarColegiatura(double cantidad)
     if (!esAdmin()){ return; }
     colegiatura += cantidad;
 };
-
+//*
 void School::recolectarColegiatura()
 {
     if (!esAdmin()){ return; }
-
+    
+    for (int i = 0; i < estudiantes.size(); i++)
+    {
+        dinero += estudiantes[i].recolectarDinero(colegiatura);
+    }
 };
 /*
 void School::pagarProfesores()
