@@ -27,7 +27,7 @@ class School
 
     void aumentarColegiatura(double _cantidad);
     void recolectarColegiatura();
-    void pagarProfesores();
+    double pagarProfesores();
     
     bool dineroSuficiente();
     void autenticar(std::string _usuario, std::string _contrasena);

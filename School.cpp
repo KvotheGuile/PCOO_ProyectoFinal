@@ -26,7 +26,7 @@ void School::aumentarColegiatura(double cantidad)
     colegiatura += cantidad;
 };
 
-/*
+//*
 void School::recolectarColegiatura()
 {
     if (!esAdmin()){ return; }
@@ -36,20 +36,23 @@ void School::recolectarColegiatura()
         dinero += estudiantes[i].recolectarDinero(colegiatura);
     }
 };
-/*
-void School::pagarProfesores()
+//*
+double School::pagarProfesores()
 {
-    if (!esAdmin()){ return; }
+    if (!esAdmin()){ return 0; }
 
     if (!dineroSuficiente())
     { 
-        return; 
+        return 0; 
     }
-
+    
+    double dineroUsado = 0;
     for(Professor p:profesores)
     {
-        dinero -= p.pagar(p.getSalario());
+        dineroUsado += p.pagar(p.getSalario());
     }
+    
+    dinero -= dineroUsado;
 
 };
 
