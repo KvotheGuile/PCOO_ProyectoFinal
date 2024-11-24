@@ -23,7 +23,7 @@ School::~School()
 void School::aumentarColegiatura(double cantidad)
 {   
     if (!esAdmin()){ return; }
-
+    colegiatura += cantidad;
 };
 
 void School::recolectarColegiatura()
