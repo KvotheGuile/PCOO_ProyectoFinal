@@ -63,11 +63,11 @@ bool School::dineroSuficiente()
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
-    for (Administrator admin:administradors)
+    for (int i = 0; i < administradors.size(); i++)
     {
-        if (admin.esUsuario(usuario))
+        if (administradors[i].esUsuario(usuario))
         {
-            admin.logIn(contrasena);
+            administradors[i].logIn(contrasena);
             break;
         }
     }
