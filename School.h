@@ -34,6 +34,7 @@ class School
 
     private:
     bool esAdmin();
+    void noAdminMensaje();
 };
 
 #endif

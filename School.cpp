@@ -36,6 +36,16 @@ void School::pagarProfesores()
 {
     if (!esAdmin()){ return; }
 
+    if (!dineroSuficiente())
+    { 
+        return; 
+    }
+
+    for(Professor p:profesores)
+    {
+        dinero -= p.pagar(p.getSalario());
+    }
+
 };
 
 bool School::dineroSuficiente()
@@ -52,11 +62,11 @@ bool School::dineroSuficiente()
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
-    for (int i = 0; i < administradors.size(); i++)
+    for (Administrator admin:administradors)
     {
-        if (administradors[i].esUsuario(usuario))
+        if (admin.esUsuario(usuario))
         {
-            administradors[i].logIn(contrasena);
+            admin.logIn(contrasena);
             break;
         }
     }
@@ -64,13 +74,12 @@ void School::autenticar(std::string usuario, std::string contrasena)
 
 bool School::esAdmin()
 {
-    for (int i = 0; i < administradors.size(); i++)
+    for (Administrator admin:administradors)
     {
-        if (administradors[i].on())
+        if (admin.on())
         {
             return true;
         }
     }
-
     return false;
 };
