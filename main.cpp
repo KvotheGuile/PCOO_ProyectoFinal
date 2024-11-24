@@ -10,7 +10,7 @@ int main()
     Administrator admin1("Mateo", "12345678");
     School school1("Escuela Amanecer", 100, admin1);
 
-    
+    school1.printInfo();
 
     return 0;
 }

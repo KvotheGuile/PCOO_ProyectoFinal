@@ -31,7 +31,7 @@ void School::recolectarColegiatura()
     if (!esAdmin()){ return; }
 
 };
-
+/*
 void School::pagarProfesores()
 {
     if (!esAdmin()){ return; }
@@ -59,6 +59,7 @@ bool School::dineroSuficiente()
 
     return dineroRequerido <= dinero;
 };
+//*/
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
@@ -71,6 +72,15 @@ void School::autenticar(std::string usuario, std::string contrasena)
         }
     }
 };
+
+void School::printInfo()
+{
+    cout<<"SCHOOL: "<<nombre<<"\n";
+    cout<<"Colegiatura: $"<<colegiatura<<"\n";
+    cout<<"Dinero: $"<<colegiatura<<"\n";
+    cout<<"Professores: "<<profesores.size()<<"\n";
+    cout<<"Alumnos:     "<<estudiantes.size()<<"\n";
+}
 
 bool School::esAdmin()
 {

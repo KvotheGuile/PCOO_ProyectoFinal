@@ -32,6 +32,8 @@ class School
     bool dineroSuficiente();
     void autenticar(std::string _usuario, std::string _contrasena);
 
+    void printInfo();
+
     private:
     bool esAdmin();
     void noAdminMensaje();
