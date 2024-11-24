@@ -16,9 +16,9 @@ class School
     double dinero;
     double colegiatura;
     
-    std::vector<Student> estudiantes;
-    std::vector<Professor> profesor;
-    std::vector<Administrator> administrador;
+    //std::vector<Student> estudiantes;
+    //std::vector<Professor> profesor;
+    //std::vector<Administrator> administrador;
 
     public:
     School();

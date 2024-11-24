@@ -17,6 +17,7 @@ class Student
     public:
     Student();
     Student(string _nombre, string _matricula, float _beca);
+    ~Student();
 
     void setBeca(float _becaNueva);
     float getBeca();
