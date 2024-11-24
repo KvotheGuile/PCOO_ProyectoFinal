@@ -7,7 +7,10 @@
 
 int main()
 {
-    cout<<"Hello world\n";
+    Administrator admin1("Mateo", "12345678");
+    School school1("Escuela Amanecer", 100, admin1);
+
+    
 
     return 0;
 }
