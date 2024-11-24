@@ -17,8 +17,8 @@ class School
     double colegiatura;
     
     std::vector<Student> estudiantes;
-    std::vector<Professor> profesor;
-    std::vector<Administrator> administrador;
+    std::vector<Professor> profesores;
+    std::vector<Administrator> administradors;
 
     public:
     School();
@@ -31,6 +31,9 @@ class School
     
     bool dineroSuficiente();
     void autenticar(std::string _usuario, std::string _contrasena);
+
+    private:
+    bool esAdmin();
 };
 
 #endif

@@ -12,6 +12,7 @@ School::School(std::string _nombre, double _colegiatura, Administrator& admin)
 {
     nombre = _nombre;
     colegiatura = _colegiatura;
+    administradors.push_back(admin);
 };
 
 School::~School()
@@ -31,15 +32,42 @@ void School::recolectarColegiatura()
 
 void School::pagarProfesores()
 {
-
+    
 };
 
 bool School::dineroSuficiente()
 {
+    double dineroRequerido = 0;
+
+    for(Professor p:profesores)
+    {
+        dineroRequerido += p.getSalario();
+    }
+
     return false;
 };
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
+    for (int i = 0; i < administradors.size(); i++)
+    {
+        if (administradors[i].esUsuario(usuario))
+        {
+            administradors[i].logIn(contrasena);
+            break;
+        }
+    }
+};
 
+bool School::esAdmin()
+{
+    for (int i = 0; i < administradors.size(); i++)
+    {
+        if (administradors[i].on())
+        {
+            return true;
+        }
+    }
+
+    return false;
 };
