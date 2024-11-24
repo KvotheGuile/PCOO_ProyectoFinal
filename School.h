@@ -18,11 +18,11 @@ class School
     
     std::vector<Student> estudiantes;
     std::vector<Professor> profesores;
-    std::vector<Administrator*> administradors;
+    std::vector<Administrator> administradors;
 
     public:
     School();
-    School(std::string _nombre, double _colegiatura, Administrator* admin);
+    School(std::string _nombre, double _colegiatura, Administrator& admin);
     ~School();
 
     void aumentarColegiatura(double _cantidad);
