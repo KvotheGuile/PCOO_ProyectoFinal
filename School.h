@@ -34,6 +34,10 @@ class School
 
     void printInfo();
 
+    void AddEstudiante(Student& _estudiante);
+    void AddProfesor(Professor& _professor);
+    void AddAdministrador(Administrator& _admin);
+
     private:
     bool esAdmin();
     void noAdminMensaje();

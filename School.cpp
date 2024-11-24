@@ -87,6 +87,23 @@ void School::printInfo()
     cout<<"Alumnos:     "<<estudiantes.size()<<"\n";
 }
 
+void School::AddEstudiante(Student& _estudiante)
+{
+    estudiantes.push_back(_estudiante);
+}
+
+void School::AddProfesor(Professor& _professor)
+{
+    if (!esAdmin()){ return; }
+    profesores.push_back(_professor);
+}
+
+void School::AddAdministrador(Administrator& _admin)
+{
+    if (!esAdmin()){ return; }
+    administradors.push_back(_admin);
+}
+
 bool School::esAdmin()
 {
     for (Administrator admin:administradors)
