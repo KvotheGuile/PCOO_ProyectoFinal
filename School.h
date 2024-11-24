@@ -16,13 +16,13 @@ class School
     double dinero;
     double colegiatura;
     
-    //std::vector<Student> estudiantes;
-    //std::vector<Professor> profesor;
-    //std::vector<Administrator> administrador;
+    std::vector<Student> estudiantes;
+    std::vector<Professor> profesor;
+    std::vector<Administrator> administrador;
 
     public:
     School();
-    School(std::string _nombre, double _colegiatura);
+    School(std::string _nombre, double _colegiatura, Administrator& admin);
     ~School();
 
     void aumentarColegiatura(double _cantidad);

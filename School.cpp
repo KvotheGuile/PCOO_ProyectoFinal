@@ -8,7 +8,7 @@ School::School()
     colegiatura = 0.0;
 };
 
-School::School(std::string _nombre, double _colegiatura)
+School::School(std::string _nombre, double _colegiatura, Administrator& admin)
 {
     nombre = _nombre;
     colegiatura = _colegiatura;
