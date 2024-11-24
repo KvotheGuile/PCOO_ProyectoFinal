@@ -21,18 +21,21 @@ School::~School()
 };
 
 void School::aumentarColegiatura(double cantidad)
-{
+{   
+    if (!esAdmin()){ return; }
 
 };
 
 void School::recolectarColegiatura()
 {
+    if (!esAdmin()){ return; }
 
 };
 
 void School::pagarProfesores()
 {
-    
+    if (!esAdmin()){ return; }
+
 };
 
 bool School::dineroSuficiente()
