@@ -8,7 +8,7 @@ School::School()
     colegiatura = 0.0;
 };
 
-School::School(std::string _nombre, double _colegiatura, Administrator& admin)
+School::School(std::string _nombre, double _colegiatura, Administrator* admin)
 {
     nombre = _nombre;
     colegiatura = _colegiatura;
@@ -63,11 +63,11 @@ bool School::dineroSuficiente()
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
-    for (Administrator admin:administradors)
+    for (Administrator* admin:administradors)
     {
-        if (admin.esUsuario(usuario))
+        if (admin->esUsuario(usuario))
         {
-            admin.logIn(contrasena);
+            admin->logIn(contrasena);
             break;
         }
     }
@@ -84,9 +84,9 @@ void School::printInfo()
 
 bool School::esAdmin()
 {
-    for (Administrator admin:administradors)
+    for (Administrator* admin:administradors)
     {
-        if (admin.on())
+        if (admin->on())
         {
             return true;
         }
