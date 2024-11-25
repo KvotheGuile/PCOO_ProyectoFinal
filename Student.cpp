@@ -8,7 +8,6 @@ Student::~Student() {}
 
 void Student::setBeca(float _becaNueva) {
     beca = _becaNueva;
-    return beca;  
 }
 
 float Student::getBeca() {
@@ -19,7 +18,7 @@ bool Student::esEstudiante(string _matricula) {
     return this->matricula == _matricula;
 }
 
-float Student::recolectarDinero(float _colegiatura) {  
+double Student::recolectarDinero(double _colegiatura) {  
     float cantidadAPagar = _colegiatura * (1 - beca);
     if (estadoDeCuenta >= cantidadAPagar) {
         estadoDeCuenta -= cantidadAPagar;
