@@ -99,6 +99,21 @@ void School::autenticar(std::string usuario, std::string contrasena)
     }
 };
 
+void School::salirAdmin()
+{
+    if (!esAdmin())
+    {
+        cout<<"Usted no es administrador.\n";
+        return;
+    }
+
+    for (int i = 0; i < administradors.size(); i++)
+    {
+        administradors[i].logOff();
+    }
+    cout<<"Usted ya no es administrador.\n";
+};
+
 void School::printInfo()
 {
     cout<<"SCHOOL: "<<nombre<<"\n";

@@ -68,7 +68,7 @@ int main()
             }
             
             break;
-        case 'S':
+        case 'S': // Salir del loop
             loopOn = false;
             break;
         default:
@@ -76,7 +76,7 @@ int main()
             break;
         }
     }
-    
+
     cout<<"Saliendo del programa.";
     return 0;
 }

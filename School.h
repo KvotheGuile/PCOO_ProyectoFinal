@@ -34,6 +34,7 @@ class School
 
     // Cuentas de administracion
     void autenticar(std::string _usuario, std::string _contrasena);
+    void salirAdmin();
     bool esAdmin();
     void noAdminMensaje();
 
