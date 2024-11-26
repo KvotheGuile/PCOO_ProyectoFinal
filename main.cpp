@@ -48,7 +48,7 @@ int main()
     {
         char input; 
         cout<<endl;
-        cout<<"\e[38;5;233m";
+        cout<<"\e[38;5;239m";
         cout<<"<L> - Log In"<<endl;
         cout<<"<O> - Log Off"<<endl;
         cout<<"<S> - Salir"<<endl;
