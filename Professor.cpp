@@ -15,7 +15,18 @@ Professor::Professor(string _nombre, string _matricula, double _salario){
     salario = _salario;
     saldo = 0;
 };
+
 Professor::~Professor(){};
+
+string Professor::getNombre()
+{
+    return nombre;
+}
+
+string Professor::getMatricula()
+{
+    return matricula;
+}
 
 double Professor::getSalario(){
     return salario;

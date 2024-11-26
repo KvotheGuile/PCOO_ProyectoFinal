@@ -19,6 +19,9 @@ class Professor
     Professor(string _nombre, string _matricula, double _salario);
     ~Professor();
 
+    string getNombre();
+    string getMatricula();
+
     double getSalario();
     void setSalario(double);
     void aumentarSalario(double);
