@@ -6,6 +6,16 @@ Student::Student(string _nombre, string _matricula, float _beca) : nombre(_nombr
 
 Student::~Student() {}
 
+string Student::getNombre()
+{
+    return nombre;
+}
+
+string Student::getMatricula()
+{
+    return matricula;
+}
+
 void Student::setBeca(float _becaNueva) {
     beca = _becaNueva;
 }

@@ -21,12 +21,12 @@ Professor::~Professor(){};
 string Professor::getNombre()
 {
     return nombre;
-}
+};
 
 string Professor::getMatricula()
 {
     return matricula;
-}
+};
 
 double Professor::getSalario(){
     return salario;
@@ -47,6 +47,3 @@ void Professor::printInfo(){
     cout << "Salario: " << salario << endl;
     cout << "Saldo: " << saldo << endl;
 }
-
-
-
