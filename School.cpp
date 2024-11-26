@@ -148,6 +148,12 @@ void School::AddAdministrador(Administrator& _admin)
         noAdminMensaje();
         return; 
     }
+
+    if (administradors.size() >= 3)
+    {
+        cout<<"Limite de administradores alcanzado\n";
+        return;
+    }
     
     administradors.push_back(_admin);
 }
