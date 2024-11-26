@@ -23,15 +23,23 @@ School::~School()
 
 void School::aumentarColegiatura(double cantidad)
 {   
-    if (!esAdmin()){ return; }
+    if (!esAdmin())
+    { 
+        noAdminMensaje();
+        return; 
+    }
     colegiatura += cantidad;
 };
 
 
 void School::recolectarColegiatura()
 {
-    if (!esAdmin()){ return; }
-    
+    if (!esAdmin())
+    { 
+        noAdminMensaje();
+        return; 
+    }
+
     for (int i = 0; i < estudiantes.size(); i++)
     {
         dinero += estudiantes[i].recolectarDinero(colegiatura);
@@ -40,7 +48,11 @@ void School::recolectarColegiatura()
 
 double School::pagarProfesores()
 {
-    if (!esAdmin()){ return 0; }
+    if (!esAdmin())
+    { 
+        noAdminMensaje();
+        return 0; 
+    }
 
     if (!dineroSuficiente())
     { 
@@ -71,6 +83,12 @@ bool School::dineroSuficiente()
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
+    if (esAdmin())
+    {
+        cout<<"El usuario ya esta autenticado\n";
+        return;
+    }
+
     for (int i = 0; i < administradors.size(); i++)
     {
         if (administradors[i].esUsuario(usuario))
@@ -97,13 +115,23 @@ void School::AddEstudiante(Student& _estudiante)
 
 void School::AddProfesor(Professor& _professor)
 {
-    if (!esAdmin()){ return; }
+    if (!esAdmin())
+    { 
+        noAdminMensaje();
+        return; 
+    }
+    
     profesores.push_back(_professor);
 }
 
 void School::AddAdministrador(Administrator& _admin)
 {
-    if (!esAdmin()){ return; }
+    if (!esAdmin())
+    { 
+        noAdminMensaje();
+        return; 
+    }
+    
     administradors.push_back(_admin);
 }
 
@@ -116,8 +144,7 @@ bool School::esAdmin()
             return true;
         }
     }
-    
-    noAdminMensaje();
+
     return false;
 };
 

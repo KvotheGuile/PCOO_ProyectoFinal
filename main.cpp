@@ -41,8 +41,42 @@ int main()
     while (loopOn)
     {
         char input;
-        cout<<"";
-    }
+        cout<<endl;
+        cout<<"<L> - Log In"<<endl;
+        cout<<"<O> - Log Off"<<endl;
+        cout<<"<S> - Salir"<<endl;
+        
+        cout<<"<P> - Pagar profesores"<<endl;
+        cout<<"<R> - Recolectar dinero de alumnos"<<endl;
+        
+        cout<<"<I> - Info general"<<endl;
+        cout<<"<R> - Recolectar dinero de alumnos"<<endl;
 
+        cout<<">>> ";
+        cin>>input;
+
+        switch (input)
+        {
+        case 'L': // Log in
+            {
+                string user, password;
+                cout<<"Introduce usuario: ";
+                cin>>user;
+                cout<<"Introduce password: ";
+                cin>>password;
+                school1.autenticar(user, password);
+            }
+            
+            break;
+        case 'S':
+            loopOn = false;
+            break;
+        default:
+            cout<<"Comando no reconocido."<<endl;
+            break;
+        }
+    }
+    
+    cout<<"Saliendo del programa.";
     return 0;
 }
