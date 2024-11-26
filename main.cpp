@@ -48,7 +48,7 @@ int main()
     {
         char input; 
         cout<<endl;
-        //cout<<"\e[0;1m";
+        cout<<"\e[38;5;233m";
         cout<<"<L> - Log In"<<endl;
         cout<<"<O> - Log Off"<<endl;
         cout<<"<S> - Salir"<<endl;
@@ -56,8 +56,7 @@ int main()
         cout<<"<P> - Pagar profesores"<<endl;
         cout<<"<C> - Cobrar alumnos"<<endl;
         cout<<"<I> - Info general"<<endl;
-        
-        //cout<<"\e[0;0m";
+        cout<<"\e[0;0m";
 
         cout<<"\n>>> ";
         cin>>input;
