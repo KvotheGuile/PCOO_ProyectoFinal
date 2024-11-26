@@ -42,65 +42,7 @@ int main()
     school1.salirAdmin();
     
     Menu(school1).Open();
-    /*
-    cout<<"\033[2J"; // Esta linea limpia la pantalla
-
-    school1.printInfo();
     
-    while (loopOn)
-    {
-        char input; 
-        cout<<endl;
-        cout<<"\e[38;5;243m";
-        cout<<"<L> - Log In"<<endl;
-        cout<<"<O> - Log Off"<<endl;
-        cout<<"<S> - Salir"<<endl;
-        
-        cout<<"<P> - Pagar profesores"<<endl;
-        cout<<"<C> - Cobrar alumnos"<<endl;
-        cout<<"<I> - Info general"<<endl;
-
-        cout<<"\e[0;0m";
-
-        cout<<"\n>>> ";
-        cin>>input;
-        input = toupper(input);
-
-        switch (input)
-        {
-        case 'L': // Log in
-            {
-                string user, password;
-                cout<<"Introduce usuario: ";
-                cin>>user;
-                cout<<"Introduce password: ";
-                cin>>password;
-                school1.autenticar(user, password);
-            }
-            
-            break;
-        case 'O': // Log off
-            school1.salirAdmin();
-            break;
-        case 'S': // Salir del loop
-            loopOn = false;
-            break;
-        case 'P': // Pagar
-            school1.pagarProfesores();
-            break;
-        case 'C': // Recolectar dinero
-            school1.recolectarColegiatura();
-            break;
-        case 'I': // Info
-            school1.printInfo();
-            break;
-    
-        default:
-            cout<<"Comando no reconocido. Utiliza 'H' para ver los comandos disponibles"<<endl;
-            break;
-        }
-    }
-    //*/
     cout<<"Saliendo del programa.";
     return 0;
 }
