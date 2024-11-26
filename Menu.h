@@ -17,7 +17,7 @@ class Menu
 
     void Open();
     void MostrarComandos();
-    void EjecutarComando(char _input);
+    void EjecutarComando(char input);
 
 };
 
