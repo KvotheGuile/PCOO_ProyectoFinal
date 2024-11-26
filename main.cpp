@@ -5,6 +5,7 @@
 #include "Administrator.h"
 #include "Professor.h"
 #include "Student.h"
+#include "Menu.h"
 
 int main()
 {
@@ -39,11 +40,13 @@ int main()
     school1.AddEstudiante(est4);
     school1.AddEstudiante(est5);
     school1.salirAdmin();
-
+    
+    Menu(school1).Open();
+    /*
     cout<<"\033[2J"; // Esta linea limpia la pantalla
 
     school1.printInfo();
-
+    
     while (loopOn)
     {
         char input; 
@@ -97,7 +100,7 @@ int main()
             break;
         }
     }
-
+    //*/
     cout<<"Saliendo del programa.";
     return 0;
 }

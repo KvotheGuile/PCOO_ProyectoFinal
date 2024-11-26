@@ -2,7 +2,7 @@
 #define MENU_H
 
 #include <iostream>
-#include "School.h";
+#include "School.h"
 using namespace std;
 
 class Menu

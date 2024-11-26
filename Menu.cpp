@@ -14,7 +14,7 @@ void Menu::Open()
     on = true;
     char input;
     cout<<"\033[2J";
-    
+    school.printInfo();
     MostrarComandos();
     
     while (on)
