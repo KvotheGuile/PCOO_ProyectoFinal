@@ -48,7 +48,7 @@ int main()
     {
         char input; 
         cout<<endl;
-        cout<<"\e[38;5;239m";
+        cout<<"\e[38;5;243m";
         cout<<"<L> - Log In"<<endl;
         cout<<"<O> - Log Off"<<endl;
         cout<<"<S> - Salir"<<endl;
@@ -56,6 +56,7 @@ int main()
         cout<<"<P> - Pagar profesores"<<endl;
         cout<<"<C> - Cobrar alumnos"<<endl;
         cout<<"<I> - Info general"<<endl;
+
         cout<<"\e[0;0m";
 
         cout<<"\n>>> ";
@@ -92,7 +93,7 @@ int main()
             break;
     
         default:
-            cout<<"Comando no reconocido."<<endl;
+            cout<<"Comando no reconocido. Utiliza 'H' para ver los comandos disponibles"<<endl;
             break;
         }
     }

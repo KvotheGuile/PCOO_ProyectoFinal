@@ -47,7 +47,7 @@ void School::recolectarColegiatura()
     }
 
     dinero += ganancia;
-    cout<<"Se a recolectado un total de $"<<ganancia<<" entre "<<estudiantes.size()<<" estudiantes.\n";
+    cout<<"Se ha recolectado un total de $"<<ganancia<<" entre "<<estudiantes.size()<<" estudiantes.\n";
 };
 
 double School::pagarProfesores()
