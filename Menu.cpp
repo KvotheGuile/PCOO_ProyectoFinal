@@ -9,6 +9,24 @@ Menu::Menu(School& _school)
 
 Menu::~Menu(){};
 
+void Menu::Open()
+{
+    on = true;
+    char input;
+    cout<<"\033[2J";
+    
+    MostrarComandos();
+    
+    while (on)
+    {
+        cout<<"\n>>> "; 
+        cin>>input;    
+
+        EjecutarComando(input); 
+    }
+    
+};
+
 void Menu::EjecutarComando(char input)
 {
     input = toupper(input);
@@ -24,7 +42,6 @@ void Menu::EjecutarComando(char input)
             cin>>password;
             school.autenticar(user, password);
         }
-        
         break;
     case 'O': // Log off
         school.salirAdmin();
@@ -44,7 +61,14 @@ void Menu::EjecutarComando(char input)
     case 'H': // Help
         MostrarComandos();
         break;
-
+    case 'A':
+        {
+            double cantidad;
+            cout<<"Introduzca la cantidad que se va a aumentar: ";
+            cin>>cantidad;
+            school.aumentarColegiatura(cantidad);
+        }
+        break;
     default:
         cout<<"Comando no reconocido. Utiliza 'H' para ver los comandos disponibles"<<endl;
         break;

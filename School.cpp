@@ -28,7 +28,17 @@ void School::aumentarColegiatura(double cantidad)
         noAdminMensaje();
         return; 
     }
+
+    if (cantidad <= 0)
+    {
+        cout<<"\e[0;31m";
+        cout<<"La cantidad tiene que ser un numero mayor a 0.\n";
+        cout<<"\e[0;0m";
+        return;
+    }
+
     colegiatura += cantidad;
+    cout<<"Se ha aumentado la colegiatura en $"<<cantidad<<"\n";
 };
 
 
