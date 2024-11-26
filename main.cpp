@@ -35,24 +35,5 @@ int main()
     
     school1.printInfo();
 
-    /*
-    school1.printInfo();
-    school1.aumentarColegiatura(900);
-    
-    do{
-        string user, password;
-        cout<<"Introduzca Usuario: ";
-        cin>>user;
-        cout<<"Introduzca Contraseña: ";
-        cin>>password;
-        school1.autenticar(user, password);
-    }
-    while (!school1.esAdmin());
-
-    school1.autenticar("Mateo", "12345678");
-    
-    school1.aumentarColegiatura(200);
-    school1.printInfo();
-    //*/
     return 0;
 }
