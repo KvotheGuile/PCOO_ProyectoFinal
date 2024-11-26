@@ -40,6 +40,8 @@ class School
 
     // Info
     void printInfo();
+    void printMiembro(string _matricula);
+    void printLista();
 
     // Add miembros a la escuela
     void AddEstudiante(Student& _estudiante);

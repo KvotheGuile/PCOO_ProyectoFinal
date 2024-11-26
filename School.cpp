@@ -143,6 +143,42 @@ void School::printInfo()
     cout<<"Alumnos:     "<<estudiantes.size()<<"\n";
 }
 
+void School::printLista()
+{
+    cout<<"Profesores:\n";
+    for (int i = 0; i < profesores.size(); i++)
+    {
+        cout<<"- "<<profesores[i].getNombre()<<" ("<<profesores[i].getMatricula()<<")\n";
+    }
+    
+    cout<<"Estudiantes:\n";
+    for (int i = 0; i < estudiantes.size(); i++)
+    {
+        cout<<"- "<<estudiantes[i].getNombre()<<" ("<<estudiantes[i].getMatricula()<<")\n";
+    }
+};
+
+void School::printMiembro(string _matricula)
+{
+    for (int i = 0; i < profesores.size(); i++)
+    {
+        if (profesores[i].esProfesor(_matricula))
+        {
+            profesores[i].printInfo();
+            return;
+        }   
+    }
+    
+    for (int i = 0; i < estudiantes.size(); i++)
+    {
+        if (estudiantes[i].esEstudiante(_matricula))
+        {
+            estudiantes[i].printInfo();
+            return;
+        }
+    }
+};
+
 void School::AddEstudiante(Student& _estudiante)
 {
     estudiantes.push_back(_estudiante);

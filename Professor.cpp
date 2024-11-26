@@ -28,6 +28,11 @@ string Professor::getMatricula()
     return matricula;
 };
 
+bool Professor::esProfesor(string _matricula)
+{
+    return this->matricula == _matricula;
+};
+
 double Professor::getSalario(){
     return salario;
 };

@@ -22,6 +22,8 @@ class Professor
     string getNombre();
     string getMatricula();
 
+    bool esProfesor(string);
+
     double getSalario();
     void setSalario(double);
     void aumentarSalario(double);

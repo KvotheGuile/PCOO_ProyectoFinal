@@ -58,6 +58,17 @@ void Menu::EjecutarComando(char input)
     case 'I': // Info
         school.printInfo();
         break;
+    case 'M': // Info
+        school.printLista();
+        break;
+    case 'E': // Info
+        {
+            string matricula;
+            cout<<"Introduce Matricula: ";
+            cin>>matricula;
+            school.printMiembro(matricula);
+        }
+        break;
     case 'H': // Help
         MostrarComandos();
         break;
