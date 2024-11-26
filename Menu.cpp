@@ -91,7 +91,7 @@ void Menu::MostrarComandos()
 
     cout<<"<I> - Info general"<<endl; 
     cout<<"<E> - Imprimir miembro especifico"<<endl; // Falta
-    cout<<"<L> - Lista de miembros"<<endl; // Falta
+    cout<<"<M> - Lista de miembros"<<endl; // Falta
     cout<<"<N> - Nuevo miembro"<<endl;  // Falta
     
 
