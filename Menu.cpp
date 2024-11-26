@@ -66,6 +66,7 @@ void Menu::EjecutarComando(char input)
             string matricula;
             cout<<"Introduce Matricula: ";
             cin>>matricula;
+            cout<<"\n";
             school.printMiembro(matricula);
         }
         break;
@@ -89,7 +90,7 @@ void Menu::EjecutarComando(char input)
 void Menu::MostrarComandos()
 {
 
-    cout<<"\e[38;5;243m";
+    cout<<"\e[38;5;251m";
     cout<<"<H> - Mostrar comandos "<<endl;
 
     cout<<"<L> - Log In"<<endl;
@@ -98,12 +99,11 @@ void Menu::MostrarComandos()
     
     cout<<"<P> - Pagar profesores"<<endl;
     cout<<"<C> - Cobrar alumnos"<<endl;
-    cout<<"<A> - Aumentar colegiatura"<<endl; // Falta
+    cout<<"<A> - Aumentar colegiatura"<<endl; 
 
     cout<<"<I> - Info general"<<endl; 
-    cout<<"<E> - Imprimir miembro especifico"<<endl; // Falta
-    cout<<"<M> - Lista de miembros"<<endl; // Falta
-    cout<<"<N> - Nuevo miembro"<<endl;  // Falta
+    cout<<"<E> - Imprimir miembro especifico"<<endl; 
+    cout<<"<M> - Lista de miembros"<<endl; 
     
 
     cout<<"\e[0;0m";

@@ -38,7 +38,7 @@ void School::aumentarColegiatura(double cantidad)
     }
 
     colegiatura += cantidad;
-    cout<<"Se ha aumentado la colegiatura en $"<<cantidad<<"\n";
+    cout<<"Se ha aumentado la colegiatura en $"<<cantidad<<". La nueva colegiatura es: $"<<colegiatura<<"\n";
 };
 
 
