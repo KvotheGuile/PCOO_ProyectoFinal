@@ -13,6 +13,7 @@ School::School(std::string _nombre, double _colegiatura, Administrator& admin)
     nombre = _nombre;
     colegiatura = _colegiatura;
     administradors.push_back(admin);
+    dinero = 0;
 };
 
 School::~School()
@@ -84,7 +85,7 @@ void School::printInfo()
 {
     cout<<"SCHOOL: "<<nombre<<"\n";
     cout<<"Colegiatura: $"<<colegiatura<<"\n";
-    cout<<"Dinero: $"<<colegiatura<<"\n";
+    cout<<"Dinero: $"<<dinero<<"\n";
     cout<<"Professores: "<<profesores.size()<<"\n";
     cout<<"Alumnos:     "<<estudiantes.size()<<"\n";
 }
