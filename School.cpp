@@ -49,11 +49,11 @@ double School::pagarProfesores()
     double dineroUsado = 0;
     for(Professor p:profesores)
     {
-        dineroUsado += p.pagar(p.getSalario());
+        dineroUsado += p.pagar();
     }
     
     dinero -= dineroUsado;
-
+    return dinero;
 };
 
 bool School::dineroSuficiente()

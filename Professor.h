@@ -22,7 +22,7 @@ class Professor
     double getSalario();
     void setSalario(double);
     void aumentarSalario(double);
-    double pagar(double);
+    double pagar();
 
     void printInfo();
 };
