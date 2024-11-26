@@ -26,7 +26,7 @@ void School::aumentarColegiatura(double cantidad)
     colegiatura += cantidad;
 };
 
-//*
+
 void School::recolectarColegiatura()
 {
     if (!esAdmin()){ return; }
@@ -36,7 +36,7 @@ void School::recolectarColegiatura()
         dinero += estudiantes[i].recolectarDinero(colegiatura);
     }
 };
-//*
+
 double School::pagarProfesores()
 {
     if (!esAdmin()){ return 0; }
@@ -67,7 +67,6 @@ bool School::dineroSuficiente()
 
     return dineroRequerido <= dinero;
 };
-//*/
 
 void School::autenticar(std::string usuario, std::string contrasena)
 {
