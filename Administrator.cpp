@@ -18,7 +18,9 @@ bool Administrator::logIn(string _passwordIntento) {
     }
     return on();
 }; 
+
 void Administrator::logOff() {loggedIn = false;};
+
 // Regresa loggedIn
 bool Administrator::on() {return loggedIn;};
 

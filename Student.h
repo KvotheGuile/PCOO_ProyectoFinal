@@ -23,10 +23,7 @@ class Student
     float getBeca();
     
     bool esEstudiante(string _matricula);
-    double recolectarDinero(double _colegiatura); 
-    /* ^^^ Ingresas la colegiatura, aplica la beca.
-    Esta cantidad se le resta al estado de cuenta y luego se regresa
-    */
+    double recolectarDinero(double _colegiatura);
 
     void printInfo();
 };
