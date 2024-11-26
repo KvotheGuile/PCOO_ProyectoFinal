@@ -94,9 +94,11 @@ void School::autenticar(std::string usuario, std::string contrasena)
         if (administradors[i].esUsuario(usuario))
         {
             administradors[i].logIn(contrasena);
-            break;
+            cout<<"Log In exitoso.\n";
+            return;
         }
     }
+    cout<<"Usuario o contraseña incorrecto\n";
 };
 
 void School::salirAdmin()

@@ -50,9 +50,8 @@ int main()
         cout<<"<R> - Recolectar dinero de alumnos"<<endl;
         
         cout<<"<I> - Info general"<<endl;
-        cout<<"<R> - Recolectar dinero de alumnos"<<endl;
 
-        cout<<">>> ";
+        cout<<"\n>>> ";
         cin>>input;
 
         switch (input)
@@ -68,9 +67,22 @@ int main()
             }
             
             break;
+        case 'O': // Log off
+            school1.salirAdmin();
+            break;
         case 'S': // Salir del loop
             loopOn = false;
             break;
+        case 'P': // Pagar
+            school1.pagarProfesores();
+            break;
+        case 'R': // Recolectar dinero
+            school1.recolectarColegiatura();
+            break;
+        case 'I': // Info
+            school1.printInfo();
+            break;
+    
         default:
             cout<<"Comando no reconocido."<<endl;
             break;
