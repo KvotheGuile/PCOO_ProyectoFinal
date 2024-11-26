@@ -20,14 +20,8 @@ bool Student::esEstudiante(string _matricula) {
 
 double Student::recolectarDinero(double _colegiatura) {  
     float cantidadAPagar = _colegiatura * (1 - beca);
-    if (estadoDeCuenta >= cantidadAPagar) {
-        estadoDeCuenta -= cantidadAPagar;
-        return cantidadAPagar;
-    } else {
-        float pagoRealizado = estadoDeCuenta;
-        estadoDeCuenta = 0;
-        return pagoRealizado;
-    }
+    estadoDeCuenta -= cantidadAPagar;
+    return cantidadAPagar;
 }
 
 void Student::printInfo() {
