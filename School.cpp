@@ -112,8 +112,12 @@ void School::autenticar(std::string usuario, std::string contrasena)
         if (administradors[i].esUsuario(usuario))
         {
             administradors[i].logIn(contrasena);
-            cout<<"Log In exitoso.\n";
-            return;
+            
+            if (administradors[i].on())
+            {
+                cout<<"Log In exitoso.\n";
+                return;
+            }
         }
     }
     cout<<"Usuario o contraseña incorrecto\n";
