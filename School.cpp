@@ -40,10 +40,14 @@ void School::recolectarColegiatura()
         return; 
     }
 
+    double ganancia = 0;
     for (int i = 0; i < estudiantes.size(); i++)
     {
-        dinero += estudiantes[i].recolectarDinero(colegiatura);
+        ganancia += estudiantes[i].recolectarDinero(colegiatura);
     }
+
+    dinero += ganancia;
+    cout<<"Se a recolectado un total de $"<<ganancia<<" entre "<<estudiantes.size()<<" estudiantes.\n";
 };
 
 double School::pagarProfesores()
@@ -56,6 +60,9 @@ double School::pagarProfesores()
 
     if (!dineroSuficiente())
     { 
+        cout<<"\e[0;31m";
+        cout<<"ERROR: No hay suficiente dinero.\n";
+        cout<<"\e[0;0m";
         return 0; 
     }
     
@@ -66,6 +73,7 @@ double School::pagarProfesores()
     }
     
     dinero -= dineroUsado;
+    cout<<"Se pago un total de $"<<dineroUsado<<" entre "<<profesores.size()<< " profesores.\n";
     return dinero;
 };
 

@@ -48,6 +48,7 @@ int main()
     {
         char input; 
         cout<<endl;
+        //cout<<"\e[0;1m";
         cout<<"<L> - Log In"<<endl;
         cout<<"<O> - Log Off"<<endl;
         cout<<"<S> - Salir"<<endl;
@@ -55,6 +56,8 @@ int main()
         cout<<"<P> - Pagar profesores"<<endl;
         cout<<"<C> - Cobrar alumnos"<<endl;
         cout<<"<I> - Info general"<<endl;
+        
+        //cout<<"\e[0;0m";
 
         cout<<"\n>>> ";
         cin>>input;
@@ -82,7 +85,7 @@ int main()
         case 'P': // Pagar
             school1.pagarProfesores();
             break;
-        case 'R': // Recolectar dinero
+        case 'C': // Recolectar dinero
             school1.recolectarColegiatura();
             break;
         case 'I': // Info
