@@ -1,5 +1,6 @@
 
 #include <iostream>
+#include <cctype>
 #include "School.h"
 #include "Administrator.h"
 #include "Professor.h"
@@ -24,6 +25,7 @@ int main()
     Student est2("Ignacio", "E024J", 0.2);
     Student est3("Hector", "E036K", 0.7);
     Student est4("Lopez", "E048L", 0);
+    Student est5("Maria", "E056M", 0.1);
 
     // Add todos los miembros iniciales de la escuela
     school1.autenticar("Mateo", "12345678");
@@ -35,24 +37,28 @@ int main()
     school1.AddEstudiante(est2);
     school1.AddEstudiante(est3);
     school1.AddEstudiante(est4);
-    
+    school1.AddEstudiante(est5);
+    school1.salirAdmin();
+
+    cout<<"\033[2J"; // Esta linea limpia la pantalla
+
     school1.printInfo();
 
     while (loopOn)
     {
-        char input;
+        char input; 
         cout<<endl;
         cout<<"<L> - Log In"<<endl;
         cout<<"<O> - Log Off"<<endl;
         cout<<"<S> - Salir"<<endl;
         
         cout<<"<P> - Pagar profesores"<<endl;
-        cout<<"<R> - Recolectar dinero de alumnos"<<endl;
-        
+        cout<<"<C> - Cobrar alumnos"<<endl;
         cout<<"<I> - Info general"<<endl;
 
         cout<<"\n>>> ";
         cin>>input;
+        input = toupper(input);
 
         switch (input)
         {
