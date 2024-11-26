@@ -7,6 +7,10 @@
 
 int main()
 {
+    // Variable del loop principal
+    bool loopOn = true;
+
+    // Declarar miembros iniciales
     Administrator admin1("Mateo", "12345678");
     Administrator admin2("Sebas", "abcd");
 
@@ -21,19 +25,24 @@ int main()
     Student est3("Hector", "E036K", 0.7);
     Student est4("Lopez", "E048L", 0);
 
+    // Add todos los miembros iniciales de la escuela
     school1.autenticar("Mateo", "12345678");
     school1.AddAdministrador(admin2);
-
     school1.AddProfesor(prof1);
     school1.AddProfesor(prof2);
     school1.AddProfesor(prof3);
-
     school1.AddEstudiante(est1);
     school1.AddEstudiante(est2);
     school1.AddEstudiante(est3);
     school1.AddEstudiante(est4);
     
     school1.printInfo();
+
+    while (loopOn)
+    {
+        char input;
+        cout<<"";
+    }
 
     return 0;
 }

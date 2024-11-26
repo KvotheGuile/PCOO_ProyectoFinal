@@ -21,25 +21,29 @@ class School
     std::vector<Administrator> administradors;
 
     public:
+    // Constructores y destructores
     School();
     School(std::string _nombre, double _colegiatura, Administrator& admin);
     ~School();
 
+    // Mover dinero
     void aumentarColegiatura(double _cantidad);
     void recolectarColegiatura();
     double pagarProfesores();
-    
     bool dineroSuficiente();
-    void autenticar(std::string _usuario, std::string _contrasena);
 
+    // Cuentas de administracion
+    void autenticar(std::string _usuario, std::string _contrasena);
+    bool esAdmin();
+    void noAdminMensaje();
+
+    // Info
     void printInfo();
 
+    // Add miembros a la escuela
     void AddEstudiante(Student& _estudiante);
     void AddProfesor(Professor& _professor);
     void AddAdministrador(Administrator& _admin);
-
-    bool esAdmin();
-    void noAdminMensaje();
 };
 
 #endif
