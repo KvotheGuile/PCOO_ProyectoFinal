@@ -77,9 +77,9 @@ double School::pagarProfesores()
     }
     
     double dineroUsado = 0;
-    for(Professor p:profesores)
+    for(int i = 0; i < profesores.size(); i++)
     {
-        dineroUsado += p.pagar();
+        dineroUsado += profesores[i].pagar();
     }
     
     dinero -= dineroUsado;
