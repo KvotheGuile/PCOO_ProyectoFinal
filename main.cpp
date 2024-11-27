@@ -18,15 +18,15 @@ int main()
 
     School school1("Escuela Amanecer", 80, admin1);
 
-    Professor prof1("Alondra", "M00A1", 50);
-    Professor prof2("Dario", "M00B2", 60);
-    Professor prof3("Cesar", "M00C3", 40);
+    Professor prof1("Alondra", "M010", 50);
+    Professor prof2("Dario", "M022", 60);
+    Professor prof3("Cesar", "M034", 40);
     
-    Student est1("Hector", "E012I", 0.5);
-    Student est2("Ignacio", "E024J", 0);
-    Student est3("Gabriela", "E036K", 0.7);
-    Student est4("Lopez", "E048L", 0);
-    Student est5("Maria", "E056M", 0.3);
+    Student est1("Hector", "E012", 0.5);
+    Student est2("Ignacio", "E024", 0);
+    Student est3("Gabriela", "E036", 0.7);
+    Student est4("Lopez", "E048", 0);
+    Student est5("Maria", "E056", 0.3);
 
     // Add todos los miembros iniciales de la escuela
     school1.autenticar("Mateo", "12345678");
