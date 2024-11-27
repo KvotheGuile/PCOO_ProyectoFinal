@@ -2,6 +2,7 @@
 #define MENU_H
 
 #include <iostream>
+#include <limits>
 #include "School.h"
 using namespace std;
 

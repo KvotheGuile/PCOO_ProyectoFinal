@@ -18,9 +18,12 @@ void Menu::Open()
     MostrarComandos();
     
     while (on)
-    {
+    {        
         cout<<"\n>>> "; 
         cin>>input;    
+
+        // Esta linea ayuda para que no se quede trabado en un input previo y se limpie el cin
+        cin.clear(); cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
 
         EjecutarComando(input); 
     }
