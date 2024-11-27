@@ -120,7 +120,7 @@ void School::autenticar(std::string usuario, std::string contrasena)
             }
         }
     }
-    cout<<"Usuario o contraseña incorrecto\n";
+    cout<<"Usuario o contrasena incorrecto\n";
 };
 
 void School::salirAdmin()
