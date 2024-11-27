@@ -181,6 +181,10 @@ void School::printMiembro(string _matricula)
             return;
         }
     }
+    
+    cout<<"\e[0;31m";
+    cout<<"ERROR: no se a encontrado nadie con la matricula "<<_matricula<<"\n";
+    cout<<"\e[0;0m";
 };
 
 void School::AddEstudiante(Student& _estudiante)
