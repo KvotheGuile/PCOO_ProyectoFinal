@@ -236,6 +236,6 @@ bool School::esAdmin()
 void School::noAdminMensaje()
 {
     cout<<"\e[0;31m";
-    cout<<"ERROR: No se puede ejecutar esta accion sin ser administrador\n";
+    cout<<"ERROR: No se puede ejecutar esta accion sin ser administrador \n";
     cout<<"\e[0;0m";
 }
