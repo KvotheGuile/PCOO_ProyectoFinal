@@ -18,9 +18,9 @@ int main()
 
     School school1("Escuela Amanecer", 80, admin1);
 
-    Professor prof1("Eduardo", "M00A1", 50);
+    Professor prof1("Alondra", "M00A1", 50);
     Professor prof2("Dario", "M00B2", 60);
-    Professor prof3("César", "M00C3", 40);
+    Professor prof3("Cesar", "M00C3", 40);
     
     Student est1("Hector", "E012I", 0.5);
     Student est2("Ignacio", "E024J", 0);

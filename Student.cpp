@@ -36,7 +36,7 @@ double Student::recolectarDinero(double _colegiatura) {
 
 void Student::printInfo() {
     cout << "Estudiante: " << nombre << "\n";
-    cout << "Matrícula: " << matricula << "\n";
+    cout << "Matricula: " << matricula << "\n";
     cout << "Estado de cuenta: $" << estadoDeCuenta << "\n";
     cout << "Beca: " << (beca * 100) << "%\n";
 }
