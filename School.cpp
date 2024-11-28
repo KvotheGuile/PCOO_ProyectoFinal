@@ -1,4 +1,4 @@
-
+#include <fstream>
 #include "School.h"
 
 School::School()
@@ -6,19 +6,80 @@ School::School()
     nombre = "";
     dinero = 0.0;
     colegiatura = 0.0;
+    inicializarDatos();
 };
 
-School::School(std::string _nombre, double _colegiatura, Administrator& admin)
+School::School(std::string _nombre, double _colegiatura)
 {
     nombre = _nombre;
     colegiatura = _colegiatura;
-    administradors.push_back(admin);
     dinero = 0;
+    inicializarDatos();
 };
 
 School::~School()
 {
     
+};
+
+void School::inicializarDatos() 
+{
+    int n;
+    ifstream admins;
+    admins.open("administradores.txt");
+    admins>>n;
+    admins.ignore();
+// Declara  Administradores
+    for (int i=0; i<n; i++)
+    {
+        string usuario, password;
+        getline(admins, usuario);
+        getline(admins, password);
+        Administrator admin(usuario, password);
+        cout<<usuario<<" "<<password<<endl;
+        administradores.push_back(admin);
+        autenticar(usuario, password);
+    }
+    admins.close();
+    
+// Toma la cantidad de profesores
+    ifstream profs;
+    profs.open("profesores.txt");
+    profs>>n;
+    profs.ignore();
+// Agrega los profesores a la escuela
+    for (int i=0; i<n; i++)
+    {
+        string nombre, matricula;
+        double salario;
+        getline(profs, nombre);
+        getline(profs, matricula);
+        profs>>salario;
+        profs.ignore();
+        Professor prof(nombre, matricula, salario);
+        AddProfesor(prof);
+    }
+    profs.close();
+
+// Toma la cantidad de estudiantes
+    ifstream ests;
+    ests.open("estudiantes.txt");
+    ests>>n;
+    ests.ignore();
+// Agrega los estudiantes a la escuela
+    for (int i=0; i<n; i++)
+    {
+        string nombre, matricula;
+        float beca;
+        getline(ests, nombre);
+        getline(ests, matricula);
+        ests>>beca;
+        ests.ignore();
+        Student est(nombre, matricula, beca);
+        AddEstudiante(est);
+    }
+    ests.close();
+    salirAdmin();
 };
 
 void School::aumentarColegiatura(double cantidad)
@@ -107,13 +168,13 @@ void School::autenticar(std::string usuario, std::string contrasena)
         return;
     }
 
-    for (int i = 0; i < administradors.size(); i++)
+    for (int i = 0; i < administradores.size(); i++)
     {
-        if (administradors[i].esUsuario(usuario))
+        if (administradores[i].esUsuario(usuario))
         {
-            administradors[i].logIn(contrasena);
+            administradores[i].logIn(contrasena);
             
-            if (administradors[i].on())
+            if (administradores[i].on())
             {
                 cout<<"Log In exitoso.\n";
                 return;
@@ -131,9 +192,9 @@ void School::salirAdmin()
         return;
     }
 
-    for (int i = 0; i < administradors.size(); i++)
+    for (int i = 0; i < administradores.size(); i++)
     {
-        administradors[i].logOff();
+        administradores[i].logOff();
     }
     cout<<"Usted ya no es administrador.\n";
 };
@@ -211,18 +272,18 @@ void School::AddAdministrador(Administrator& _admin)
         return; 
     }
 
-    if (administradors.size() >= 3)
+    if (administradores.size() >= 3)
     {
         cout<<"Limite de administradores alcanzado\n";
         return;
     }
     
-    administradors.push_back(_admin);
+    administradores.push_back(_admin);
 }
 
 bool School::esAdmin()
 {
-    for (Administrator admin:administradors)
+    for (Administrator admin:administradores)
     {
         if (admin.on())
         {
