@@ -1,0 +1,16 @@
+5
+Hector
+E012
+0.5
+Ignacio
+E024
+0
+Gabriela
+E036
+0.7
+Lopez
+E048
+0
+Maria
+E056
+0.3

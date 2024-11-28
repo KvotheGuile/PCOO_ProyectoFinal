@@ -1,0 +1,10 @@
+3
+Alondra
+M010
+50
+Dario
+M022
+60
+Cesar
+M034
+40

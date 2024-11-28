@@ -12,7 +12,7 @@ int main()
     // Variable del loop principal
     bool loopOn = true;
 
-    // Declarar miembros iniciales
+    // Declarar miembros
     Administrator admin1("Mateo", "12345678");
     Administrator admin2("Sebas", "abcd");
 
